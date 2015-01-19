@@ -1,6 +1,7 @@
 require_relative 'client/tickets.rb'
 require_relative 'client/agents.rb'
 require_relative 'client/groups.rb'
+require_relative 'client/reports.rb'
 require 'json'
 
 module Supportbee
@@ -9,6 +10,7 @@ module Supportbee
     include Supportbee::Client::Tickets
     include Supportbee::Client::Agents
     include Supportbee::Client::Groups
+    include Supportbee::Client::Reports
 
     def initialize(options={})
       @company = options[:company]
